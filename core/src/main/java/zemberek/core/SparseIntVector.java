@@ -188,7 +188,11 @@ public class SparseIntVector implements Iterable<SparseIntVector.TableEntry> {
 
     private class TableIterator implements Iterator<TableEntry> {
 
-        int i;
+        public TableIterator() {
+			super();
+		}
+
+		int i;
         int k;
 
         @Override

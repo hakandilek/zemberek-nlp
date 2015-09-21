@@ -1,11 +1,22 @@
 package zemberek.lm.compression;
 
-import com.google.common.base.Stopwatch;
-import com.google.common.io.Files;
-import com.google.common.io.Resources;
-import junit.framework.Assert;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.google.common.base.Stopwatch;
+import com.google.common.io.ByteSink;
+import com.google.common.io.ByteSource;
+import com.google.common.io.Files;
+import com.google.common.io.Resources;
+
+import junit.framework.Assert;
 import zemberek.core.SpaceTabTokenizer;
 import zemberek.core.io.LineIterator;
 import zemberek.core.io.SimpleTextReader;
@@ -14,13 +25,6 @@ import zemberek.lm.BaseLanguageModel;
 import zemberek.lm.FakeLm;
 import zemberek.lm.LmVocabulary;
 import zemberek.lm.backoff.SimpleBackoffNgramModel;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
 
 public class SmoothLmTest {
 
@@ -39,7 +43,9 @@ public class SmoothLmTest {
     File getTinyArpaFile() throws IOException {
         File tmp = File.createTempFile("tiny", ".arpa");
         Log.info("Temporary test Arpa model file %s", tmp);
-        Files.copy(Resources.newInputStreamSupplier(TINY_ARPA_URL), tmp);
+        ByteSource byteSource = Resources.asByteSource(TINY_ARPA_URL);
+        ByteSink byteSink = Files.asByteSink(tmp);
+        byteSource.copyTo(byteSink);
         return tmp;
     }
 

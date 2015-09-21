@@ -55,8 +55,7 @@ public class TurkishMorphParserTest {
 
         final TurkishMorphParser parser = TurkishMorphParser.builder().addDefaultDictionaries().addDefaultCache().build();
 
-        final Stopwatch stopWatch = new Stopwatch();
-        stopWatch.start();
+        final Stopwatch stopWatch = Stopwatch.createStarted();
         int i = 0;
         for (String word : words) {
             parser.parse(word);

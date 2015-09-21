@@ -1,14 +1,18 @@
 package zemberek.lm.apps;
 
-import com.google.common.io.Files;
-import com.google.common.io.Resources;
-import junit.framework.Assert;
-import org.junit.Test;
-import zemberek.lm.compression.SmoothLm;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+
+import org.junit.Test;
+
+import com.google.common.io.ByteSink;
+import com.google.common.io.ByteSource;
+import com.google.common.io.Files;
+import com.google.common.io.Resources;
+
+import junit.framework.Assert;
+import zemberek.lm.compression.SmoothLm;
 
 public class ConvertToSmoothLmTest {
 
@@ -16,7 +20,9 @@ public class ConvertToSmoothLmTest {
 
     File getTinyArpaFile() throws IOException {
         File tmp = File.createTempFile("tiny", ".arpa");
-        Files.copy(Resources.newInputStreamSupplier(TINY_ARPA_URL), tmp);
+        ByteSource byteSource = Resources.asByteSource(TINY_ARPA_URL);
+        ByteSink byteSink = Files.asByteSink(tmp);
+        byteSource.copyTo(byteSink);
         return tmp;
     }
 

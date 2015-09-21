@@ -214,8 +214,7 @@ public class AmbiguityStats extends BaseParser {
 
     public static void main(String[] args) throws IOException {
         AmbiguityStats parser = new AmbiguityStats();
-        Stopwatch w = new Stopwatch();
-        w.start();
+        Stopwatch w = Stopwatch.createStarted();
         //parser.ambiguousWordStats("File with turkish sentences");
         //parser.ambiguousGroupStats("File with turkish sentences");
         System.out.println(w.elapsed(TimeUnit.MILLISECONDS) + " ms.");

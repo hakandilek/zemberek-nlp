@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Locale;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.sqrt;
@@ -237,7 +238,7 @@ public class FloatArrays {
         String formatStr = "%." + fractionDigits + "f";
         int i = 0;
         for (float v : input) {
-            sb.append(String.format(formatStr, v));
+            sb.append(String.format(Locale.ENGLISH, formatStr, v));
             if (i++ < input.length - 1) sb.append(delimiter);
         }
         return sb.toString();
@@ -248,8 +249,8 @@ public class FloatArrays {
         String formatStr = "%." + fractionDigits + "f";
         int i = 0;
         for (float v : input) {
-            String num = String.format(formatStr, v);
-            sb.append(String.format("%-" + rightPad + "s", num));
+            String num = String.format(Locale.ENGLISH, formatStr, v);
+            sb.append(String.format(Locale.ENGLISH, "%-" + rightPad + "s", num));
             if (i++ < input.length - 1) sb.append(delimiter);
         }
         return sb.toString().trim();
