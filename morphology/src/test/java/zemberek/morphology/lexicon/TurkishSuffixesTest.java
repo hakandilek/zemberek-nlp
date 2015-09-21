@@ -1,16 +1,16 @@
 package zemberek.morphology.lexicon;
 
-import junit.framework.Assert;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
 import org.junit.Test;
+
 import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
 import zemberek.morphology.parser.MorphParse;
 import zemberek.morphology.parser.SimpleParser;
-
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TurkishSuffixesTest {
 

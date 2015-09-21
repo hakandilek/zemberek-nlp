@@ -1,12 +1,20 @@
 package zemberek.morphology.generator.morphology;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.io.Resources;
-import junit.framework.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.io.Strings;
 import zemberek.morphology.generator.SimpleGenerator;
@@ -17,12 +25,6 @@ import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
 import zemberek.morphology.parser.MorphParse;
 import zemberek.morphology.parser.SimpleParser;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SimpleGeneratorTest {
     @Test

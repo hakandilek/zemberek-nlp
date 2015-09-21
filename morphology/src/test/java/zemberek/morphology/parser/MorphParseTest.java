@@ -1,17 +1,19 @@
 package zemberek.morphology.parser;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
-import junit.framework.Assert;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
-import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
-import zemberek.morphology.lexicon.tr.TurkishSuffixes;
+import static org.hamcrest.Matchers.equalTo;
 
 import java.util.List;
 
-import static org.hamcrest.Matchers.equalTo;
+import org.hamcrest.MatcherAssert;
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.google.common.base.Joiner;
+import com.google.common.collect.Lists;
+
+import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
+import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
+import zemberek.morphology.lexicon.tr.TurkishSuffixes;
 
 public class MorphParseTest {
 

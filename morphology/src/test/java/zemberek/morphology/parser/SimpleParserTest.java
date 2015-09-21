@@ -1,20 +1,26 @@
 package zemberek.morphology.parser;
 
-import junit.framework.Assert;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.junit.Assert;
 import org.junit.Test;
+
 import zemberek.core.turkish.PrimaryPos;
 import zemberek.core.turkish.RootAttribute;
-import zemberek.morphology.lexicon.*;
+import zemberek.morphology.lexicon.DictionaryItem;
+import zemberek.morphology.lexicon.NullSuffixForm;
+import zemberek.morphology.lexicon.Suffix;
+import zemberek.morphology.lexicon.SuffixForm;
+import zemberek.morphology.lexicon.SuffixFormTemplate;
+import zemberek.morphology.lexicon.SuffixProvider;
 import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
 import zemberek.morphology.lexicon.graph.DynamicSuffixProvider;
 import zemberek.morphology.lexicon.graph.SuffixData;
 import zemberek.morphology.lexicon.graph.TerminationType;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class SimpleParserTest {
 

@@ -1,29 +1,41 @@
 package zemberek.morphology.lexicon;
 
-import com.google.common.collect.Lists;
-import com.google.common.io.Resources;
-import junit.framework.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import zemberek.core.io.SimpleTextReader;
-import zemberek.core.io.SimpleTextWriter;
-import zemberek.core.io.Strings;
-import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.SecondaryPos;
-import zemberek.core.turkish.RootAttribute;
-import zemberek.core.turkish.TurkicSeq;
-import zemberek.core.turkish.TurkishAlphabet;
-import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
-import zemberek.morphology.lexicon.tr.TurkishSuffixes;
-
+import static zemberek.core.turkish.PrimaryPos.Noun;
+import static zemberek.core.turkish.PrimaryPos.Pronoun;
+import static zemberek.core.turkish.PrimaryPos.Verb;
+import static zemberek.core.turkish.RootAttribute.Doubling;
+import static zemberek.core.turkish.RootAttribute.InverseHarmony;
+import static zemberek.core.turkish.RootAttribute.LastVowelDrop;
+import static zemberek.core.turkish.RootAttribute.NoVoicing;
+import static zemberek.core.turkish.RootAttribute.Voicing;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.*;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
-import static zemberek.core.turkish.PrimaryPos.*;
-import static zemberek.core.turkish.RootAttribute.*;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.google.common.collect.Lists;
+import com.google.common.io.Resources;
+
+import zemberek.core.io.SimpleTextReader;
+import zemberek.core.io.SimpleTextWriter;
+import zemberek.core.io.Strings;
+import zemberek.core.turkish.PrimaryPos;
+import zemberek.core.turkish.RootAttribute;
+import zemberek.core.turkish.SecondaryPos;
+import zemberek.core.turkish.TurkicSeq;
+import zemberek.core.turkish.TurkishAlphabet;
+import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
+import zemberek.morphology.lexicon.tr.TurkishSuffixes;
 
 public class TurkishDictionaryLoaderTest {
 

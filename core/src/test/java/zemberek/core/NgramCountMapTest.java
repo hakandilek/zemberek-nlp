@@ -1,13 +1,14 @@
 package zemberek.core;
 
-import com.google.common.base.Stopwatch;
-import junit.framework.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.google.common.base.Stopwatch;
 
 public class NgramCountMapTest {
 

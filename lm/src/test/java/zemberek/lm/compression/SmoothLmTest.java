@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -16,7 +17,6 @@ import com.google.common.io.ByteSource;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
 
-import junit.framework.Assert;
 import zemberek.core.SpaceTabTokenizer;
 import zemberek.core.io.LineIterator;
 import zemberek.core.io.SimpleTextReader;

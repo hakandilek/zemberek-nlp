@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.google.common.io.ByteSink;
@@ -11,7 +12,6 @@ import com.google.common.io.ByteSource;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
 
-import junit.framework.Assert;
 import zemberek.lm.compression.SmoothLm;
 
 public class ConvertToSmoothLmTest {

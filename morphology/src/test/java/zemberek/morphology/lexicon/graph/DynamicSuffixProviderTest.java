@@ -1,8 +1,13 @@
 package zemberek.morphology.lexicon.graph;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
-import zemberek.morphology.lexicon.*;
+
+import zemberek.morphology.lexicon.DictionaryItem;
+import zemberek.morphology.lexicon.NullSuffixForm;
+import zemberek.morphology.lexicon.Suffix;
+import zemberek.morphology.lexicon.SuffixForm;
+import zemberek.morphology.lexicon.SuffixFormTemplate;
 
 public class DynamicSuffixProviderTest {
 

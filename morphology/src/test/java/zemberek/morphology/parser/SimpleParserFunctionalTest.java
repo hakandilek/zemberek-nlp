@@ -1,9 +1,20 @@
 package zemberek.morphology.parser;
 
-import com.google.common.io.Resources;
-import junit.framework.Assert;
+import java.io.File;
+import java.io.IOException;
+import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.google.common.io.Resources;
 
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.io.SimpleTextWriter;
@@ -12,15 +23,6 @@ import zemberek.morphology.lexicon.SuffixProvider;
 import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
-import zemberek.morphology.parser.MorphParse;
-import zemberek.morphology.parser.MorphParser;
-import zemberek.morphology.parser.SimpleParser;
-import zemberek.morphology.parser.TrieBasedParser;
-
-import java.io.File;
-import java.io.IOException;
-import java.text.Collator;
-import java.util.*;
 
 public class SimpleParserFunctionalTest {
 
