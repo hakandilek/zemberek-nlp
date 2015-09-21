@@ -11,3 +11,11 @@
 *.ipr
 */.idea/workspace.xml 
 */.idea/tasks.xml
+/dependencies/
+*/bin
+*/.project
+*/.classpath
+*/.settings/
+*/target/
+/.settings/
+/.project
